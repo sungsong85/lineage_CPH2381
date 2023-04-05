@@ -18,6 +18,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_CPH2381.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_CPH2381-eng \
-    aosp_CPH2381-user \
-    aosp_CPH2381-userdebug
+    lineage_CPH2381-eng \
+    lineage_CPH2381-user \
+    lineage_CPH2381-userdebug
