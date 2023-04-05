@@ -1,8 +1,26 @@
+# Copyright (C) 2018 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 DEVICE_PATH := device/oneplus/CPH2381
 BOARD_VENDOR := oneplus
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2022-12-05
+
+# Display
+TARGET_SCREEN_DENSITY := 440
+
+# OTA assert
+TARGET_OTA_ASSERT_DEVICE := CPH2381
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
@@ -33,5 +51,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vendor.qti.hardware.display.composer-serv
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vendor.qti.hardware.servicetracker@1.2-service.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
+
+# Inherit from sm6375-common
+include device/oneplus/sm6375-common/BoardConfigCommon.mk
 
 -include vendor/oneplus/CPH2381/BoardConfigVendor.mk
