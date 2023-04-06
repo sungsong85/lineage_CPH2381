@@ -52,7 +52,6 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vendor.qti.hardware.servicetracker@1.2-se
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
-# Inherit from sm6375-common
-include device/oneplus/sm6375-common/BoardConfigCommon.mk
+
 
 -include vendor/oneplus/CPH2381/BoardConfigVendor.mk
