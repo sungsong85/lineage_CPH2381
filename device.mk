@@ -109,7 +109,7 @@ PRODUCT_PACKAGES += \
     fstab.at.qcom \
     fstab.default \
     fstab.emmc \
-    ueventd.qcom.rc \
+
 
 # Seccomp
 PRODUCT_COPY_FILES += \
